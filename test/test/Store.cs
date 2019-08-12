@@ -7,11 +7,11 @@ namespace test
     {
         public List<Product> ProductList = new List<Product>();
 
-        public void AddProduct(int id, string name, int price)
+        public void AddProduct(string id, string name, int price)
         {
             foreach (Product p in ProductList)
             {
-                if (p.Id == id)
+                if (p.Id.Equals(id))
                 {
                     Console.WriteLine("*Error: Duplicate product ID.");
                     return;
@@ -21,11 +21,11 @@ namespace test
             ProductList.Add(pro);
         }
 
-        public void DeleteProduct(int id)
+        public void DeleteProduct(string id)
         {
             foreach (Product p in ProductList)
             {
-                if (p.Id == id)
+                if (p.Id.Equals(id))
                 {
                     ProductList.Remove(p);
                     Console.WriteLine("Success!");

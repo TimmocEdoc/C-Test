@@ -8,7 +8,7 @@ namespace test
         {
             Store s = new Store();
             int choose;
-            int id;
+            string id;
             string name;
             int price;
             while (true)
@@ -23,7 +23,7 @@ namespace test
                 {
                     case 1:
                         Console.WriteLine("Enter Product ID:");
-                        id = Convert.ToInt32(Console.ReadLine());
+                        id = Console.ReadLine();
                         Console.WriteLine("Enter Name:");
                         name = Console.ReadLine();
                         Console.WriteLine("Enter Price:");
@@ -35,7 +35,7 @@ namespace test
                         break;
                     case 3:
                         Console.WriteLine("Enter Product ID:");
-                        id = Convert.ToInt32(Console.ReadLine());
+                        id = Console.ReadLine();
                         s.DeleteProduct(id);
                         break;
                     case 4:
